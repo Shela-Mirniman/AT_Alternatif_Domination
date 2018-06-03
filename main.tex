@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\author{Alchemist}
+
+\title{Alternative AT Domination System}
+
+\begin{document}
+\maketitle
+
+\section{Design Principle}
+\begin{itemize}
+	\item The consequential event like loosing a city should take a long time (months).
+	\item One type of style (pvp,pve,social) should not be advantaged.
+	\item The system should not affect too much people that don't want to be part of it.
+	\item The system should be easy to extend and the maximum number of AT event should be tied to it.
+	\item Attacking multiple cities at once should be very difficult.
+\end{itemize}
+
+\section{Definitions}
+\begin{description}
+	\item[City:] A city/town that is currently owned by a player.
+	\item[Faction:] A player controlled faction.
+	\item[Leader:] The leader of a faction.
+	\item[Capital:] The main city of the faction.
+	\item[Controlled City] Other city controlled by the faction and with a governor as it head.
+	\item[Governor:] The leader of controlled city, is appointed by the controlling faction leader.
+	\item[Resources:] Abstract quantity representing the resources in men, money and equipment of a city.
+\end{description}
+
+\section{Resources}
+The core principle of the idea is the notion of resources. It is a commodity that can be seen as a representation of the strength of a city. Resources are gained by te activity of the faction and spend for the maintenance of the city and waging war.
+
+The following ways can be used to obtain resources:
+\begin{itemize}
+	\item The number of member of the faction bring a quantity of resource.
+	\item Population of player active inside a city.
+	\item An official player event bring resources to the organising city proportional to the affluence of the event.
+	\item DM event can add resources.
+	\item Treaties with other cities like protectorat or help shipment allows to receive resources transferred from another city. 
+\end{itemize}
+
+The resource can be lost in the following manner:
+\begin{itemize}
+	\item A DM event like demon attack destroying part of a city.
+	\item War.
+	\item Treaties with other cities forcing you to send resources.
+	\item A montly maintenance fee, higher in case of many protectorat and possessions.
+\end{itemize}
+
+\section{War}
+
+A war has the following rules:
+\begin{itemize}
+	\item A war happen between two cities.
+	\item The war is declared by the governor of the city with approval of the faction leader if needed.
+	\item Once a war is declared, each side need to decide a quantity of resources to dedicate to the war.
+	\item When the dedicated resource of one side reach zero. The enemy army march toward the city and will attain the city in one RL week.
+	\item The war is done by participating in automatic event of different kind but with balanced team. This is done on a separated map not in the city itself. Possibilities are:
+		\begin{itemize}
+			\item Team pvp with some npc.
+			\item Capture the flag.
+			\item Team against npc.
+		\end{itemize}
+		Each win of one side remove point to the other side proportional to the difference of resources.
+	\item Participating in event may allow player to get reward.
+	\item Multiple war between different cities are possible and are treated independently.
+\end{itemize}
+
+\section{Discussion of the System}
+The interesting part of the system is that it give something to do to all kind of players and give them an utility in the full system.
+\begin{itemize}
+	\item Social player and event organizer together with builder help their cities by attracting player which increase the resource that can be used for war.
+	\item Pvper and Pveer can play with other like minded person.
+	\item And finally the effect of dm event can be noticeable by the bonus or malus resources received.
+	\item Inactive cities will automatically disappear because of the upkeep cost.
+	\item Faction waging war to everybody will not survive except strong economy because of the need to diversify their resources. 
+	\item The majority of system needed are already in place. Like the war event for CTF for example.
+\end{itemize}
+
+\section{Step to Implement}
+\begin{itemize}
+	\item Add a variable to the database for the resource of all cities.
+	\item Add dm mean to manipulate the variable.
+	\item Make automatic the war event by adapting CTF.
+	\item Have statistics tool to know how many player are actif in all cities.
+	\item Balance the gain and lost of resources given the different features.
+\end{itemize}
+
+\end{document}
